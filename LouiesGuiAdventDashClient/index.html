@@ -47,38 +47,7 @@
         </header>
         <div class="body">
 
-            <div class="grid">
-                <div class="glance column sm-col-12">
-                    <ul class="clear-list inline-list">
-                        <li>
-                        </li>
-                    </ul>
 
-                    <ul class="clear-list inline-list">
-                        <li>
-                            <h6>CPU</h6>
-                            <span>75 <i class="ion ion-arrow-graph-up-right success"></i></span>
-                        </li>
-                        <li>
-                            <h6>Memory Usage</h6>
-                            <span>4.30 <i class="ion ion-arrow-graph-up-right success"></i></span>
-                        </li>
-                        <li>
-                            <h6>Disk I/O</h6>
-                            <span>147.98 <i class="ion ion-arrow-graph-up-right success"></i></span>
-                        </li>
-                        <li>
-                            <h6>App Memory Usage</h6>
-                            <span>$2346.68 <i class="ion ion-arrow-graph-down-right danger"></i></span>
-                        </li>
-                    </ul>
-
-                    <ul class="clear-list inline-list">
-                        <li>
-                        </li>
-                    </ul>
-                </div>
-            </div>
 
             <div class="charts js-charts">
 
@@ -90,14 +59,14 @@
                                     <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
                                 </li>
                                 <li>
-                                    <h5>CPU Meters</h5>
+                                    <h5>Overall CPU Meters</h5>
                                 </li>
                                 <li class="pull-right">
                                     <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
                                 </li>
                             </ul>
                             <div class="chart-body">
-                                <div id="lineChart" class="epoch" style="width: 400px; height: 300px;"></div>
+                                <div id="gaugeChart3" class="epoch gauge-large" style="width: 400px; height: 300px;"></div>
                             </div>
                         </div>
                     </div>
@@ -109,14 +78,14 @@
                                     <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
                                 </li>
                                 <li>
-                                    <h5>Memory Usage</h5>
+                                    <h5>Overall Memory Usage</h5>
                                 </li>
                                 <li class="pull-right">
                                     <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
                                 </li>
                             </ul>
                             <div class="chart-body">
-                                <div id="gaugeChart" class="epoch gauge-large" style="width: 400px; height: 300px;"></div>
+                                <div id="gaugeChart" class="epoch gauge-large category20c" style="width: 400px; height: 300px;"></div>
                             </div>
                         </div>
                     </div>
@@ -128,43 +97,7 @@
                                     <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
                                 </li>
                                 <li>
-                                    <h5>Chart Name</h5>
-                                </li>
-                                <li class="pull-right">
-                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
-                                </li>
-                            </ul>
-                            <div class="chart-body">
-                                <div id="barChart" class="epoch" style="width: 400px; height: 300px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column md-col-6 lg-col-4">
-                        <div class="chart-container ">
-                            <ul class="chart-header clear-list inline-list text-center  ">
-                                <li class="pull-left">
-                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
-                                </li>
-                                <li>
-                                    <h5>Chart Name</h5>
-                                </li>
-                                <li class="pull-right">
-                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
-                                </li>
-                            </ul>
-                            <div class="chart-body">
-                                <div id="areaChart" class="epoch" style="width: 400px; height: 300px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column md-col-6 lg-col-4">
-                        <div class="chart-container ">
-                            <ul class="chart-header clear-list inline-list text-center  ">
-                                <li class="pull-left">
-                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
-                                </li>
-                                <li>
-                                    <h5>Chart Name</h5>
+                                    <h5>App Memory Usage</h5>
                                 </li>
                                 <li class="pull-right">
                                     <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
@@ -175,6 +108,43 @@
                             </div>
                         </div>
                     </div>
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>CPU / Memory</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                                <div id="areaChart" class="epoch" style="width: 500px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>CPU / Memory</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                               
+                                <div id="barChart" class="epoch" style="width: 500px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="column md-col-6 lg-col-4">
                         <div class="chart-container ">
@@ -183,14 +153,15 @@
                                     <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
                                 </li>
                                 <li>
-                                    <h5>Chart Name</h5>
+                                    <h5>CPU / Memory</h5>
                                 </li>
                                 <li class="pull-right">
                                     <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
                                 </li>
                             </ul>
                             <div class="chart-body">
-                                <div id="gaugeChart2" class="epoch gauge-large" style="width: 400px; height: 300px;"></div>
+                                
+                                <div id="lineChart" class="epoch" style="width: 500px; height: 300px;"></div>
                             </div>
                         </div>
                     </div>

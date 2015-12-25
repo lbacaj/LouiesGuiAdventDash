@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Louie's Advent Dash</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
+    
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/epoch.min.css" />
+
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="http://localhost:8085/signalr/hubs" type="text/javascript"></script>
+
+    <script src="Scripts/d3/d3.min.js"></script>
+    <script src="Scripts/epoch.min.js"></script>
+
+
+</head>
+<body>
+    <div class="container-full">
+        <header>
+            <div class="grid">
+                <div class="menu column sm-col-12">
+                    <ul class="clear-list inline-list">
+                        <li>
+                            <a href="#menu" class="text-medium"><i class="ion ion-grid text-blue"></i></a>
+                        </li>
+                    </ul>
+
+
+                    <div class="logo">
+                        <h5>Advent Dash</h5>
+                    </div>
+
+                    <ul class="clear-list inline-list pull-right">
+                        <li>
+                            <a href="#menu" class="text-medium"><i class="ion ion-android-calendar text-blue"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="body">
+
+            <div class="grid">
+                <div class="glance column sm-col-12">
+                    <ul class="clear-list inline-list">
+                        <li>
+                        </li>
+                    </ul>
+
+                    <ul class="clear-list inline-list">
+                        <li>
+                            <h6>CPU</h6>
+                            <span>75 <i class="ion ion-arrow-graph-up-right success"></i></span>
+                        </li>
+                        <li>
+                            <h6>Memory Usage</h6>
+                            <span>4.30 <i class="ion ion-arrow-graph-up-right success"></i></span>
+                        </li>
+                        <li>
+                            <h6>Disk I/O</h6>
+                            <span>147.98 <i class="ion ion-arrow-graph-up-right success"></i></span>
+                        </li>
+                        <li>
+                            <h6>App Memory Usage</h6>
+                            <span>$2346.68 <i class="ion ion-arrow-graph-down-right danger"></i></span>
+                        </li>
+                    </ul>
+
+                    <ul class="clear-list inline-list">
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="charts js-charts">
+
+                <div class="grid">
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>CPU Meters</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                                <div id="lineChart" class="epoch" style="width: 400px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>Memory Usage</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                                <div id="gaugeChart" class="epoch gauge-large" style="width: 400px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>Chart Name</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                                <div id="barChart" class="epoch" style="width: 400px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>Chart Name</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                                <div id="areaChart" class="epoch" style="width: 400px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>Chart Name</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                                <div id="gaugeChart2" class="epoch gauge-large" style="width: 400px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column md-col-6 lg-col-4">
+                        <div class="chart-container ">
+                            <ul class="chart-header clear-list inline-list text-center  ">
+                                <li class="pull-left">
+                                    <a href="#" class="text-blue"><i class="ion align ion-more"></i></a>
+                                </li>
+                                <li>
+                                    <h5>Chart Name</h5>
+                                </li>
+                                <li class="pull-right">
+                                    <a href="#" class="text-blue js-close"><i class="ion align ion-backspace-outline"></i></a>
+                                </li>
+                            </ul>
+                            <div class="chart-body">
+                                <div id="gaugeChart2" class="epoch gauge-large" style="width: 400px; height: 300px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer></footer>
+    </div>
+
+    <script src="Scripts/signalrapp.js" type="text/javascript"></script>
+
+</body>
+</html>
